@@ -12,7 +12,7 @@
 
     <groupId>org.jooq</groupId>
     <artifactId>jooq-parent</artifactId>
-    <version>3.8.4</version>
+    <version>3.8.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>jOOQ Parent</name>
@@ -40,10 +40,23 @@
     </licenses>
 
     <scm>
-        <developerConnection>https://github.com/jOOQ/jOOQ.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/jOOQ/jOOQ.git</developerConnection>
         <url>https://github.com/jOOQ/jOOQ.git</url>
-        <connection>git://github.com/jOOQ/jOOQ.git</connection>
+        <connection>scm:git:git://github.com/jOOQ/jOOQ.git</connection>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>soupe-releases</id>
+            <name>Soupe Releases Repository</name>
+            <url>http://ci.mittop.io:8081/nexus/content/repositories/soupe-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>soupe-snapshots</id>
+            <name>Soupe Snapshots Repository</name>
+            <url>http://ci.mittop.io:8081/nexus/content/repositories/soupe-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <issueManagement>
         <system>GitHub</system>
@@ -157,6 +170,19 @@
                     <downloadSources>true</downloadSources>
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
