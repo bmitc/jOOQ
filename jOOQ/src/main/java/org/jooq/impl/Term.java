@@ -113,6 +113,8 @@ enum Term {
 
 
 
+                case ORACLE:
+                case DB2:
                 case DERBY:
                 case SQLITE:
                     return "length";
