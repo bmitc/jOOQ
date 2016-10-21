@@ -74,13 +74,13 @@ public class OracleDataType {
     public static final DataType<UByte>      TINYINTUNSIGNED    = new DefaultDataType<UByte>(SQLDialect.ORACLE, SQLDataType.TINYINTUNSIGNED, "tinyint unsigned", "unsigned");
     public static final DataType<Short>      SMALLINT           = new DefaultDataType<Short>(SQLDialect.ORACLE, SQLDataType.SMALLINT, "smallint", "signed");
     public static final DataType<UShort>     SMALLINTUNSIGNED   = new DefaultDataType<UShort>(SQLDialect.ORACLE, SQLDataType.SMALLINTUNSIGNED, "smallint unsigned", "unsigned");
-    public static final DataType<Integer>    INT                = new DefaultDataType<Integer>(SQLDialect.ORACLE, SQLDataType.INTEGER, "int", "signed");
+    public static final DataType<Integer>    INT                = new DefaultDataType<Integer>(SQLDialect.ORACLE, SQLDataType.INTEGER, "number", "signed");
     public static final DataType<UInteger>   INTUNSIGNED        = new DefaultDataType<UInteger>(SQLDialect.ORACLE, SQLDataType.INTEGERUNSIGNED, "int unsigned", "unsigned");
     public static final DataType<Integer>    MEDIUMINT          = new DefaultDataType<Integer>(SQLDialect.ORACLE, SQLDataType.INTEGER, "mediumint", "signed");
     public static final DataType<UInteger>   MEDIUMINTUNSIGNED  = new DefaultDataType<UInteger>(SQLDialect.ORACLE, SQLDataType.INTEGERUNSIGNED, "mediumint unsigned", "unsigned");
     public static final DataType<Integer>    INTEGER            = new DefaultDataType<Integer>(SQLDialect.ORACLE, SQLDataType.INTEGER, "integer", "signed");
     public static final DataType<UInteger>   INTEGERUNSIGNED    = new DefaultDataType<UInteger>(SQLDialect.ORACLE, SQLDataType.INTEGERUNSIGNED, "integer unsigned", "unsigned");
-    public static final DataType<Long>       BIGINT             = new DefaultDataType<Long>(SQLDialect.ORACLE, SQLDataType.BIGINT, "bigint", "signed");
+    public static final DataType<Long>       BIGINT             = new DefaultDataType<Long>(SQLDialect.ORACLE, SQLDataType.BIGINT, "number", "signed");
     public static final DataType<ULong>      BIGINTUNSIGNED     = new DefaultDataType<ULong>(SQLDialect.ORACLE, SQLDataType.BIGINTUNSIGNED, "bigint unsigned", "unsigned");
     public static final DataType<Double>     DOUBLE             = new DefaultDataType<Double>(SQLDialect.ORACLE, SQLDataType.DOUBLE, "double", "decimal");
     public static final DataType<Double>     FLOAT              = new DefaultDataType<Double>(SQLDialect.ORACLE, SQLDataType.FLOAT, "float", "decimal");
@@ -90,7 +90,7 @@ public class OracleDataType {
     public static final DataType<Boolean>    BIT                = new DefaultDataType<Boolean>(SQLDialect.ORACLE, SQLDataType.BIT, "bit", "unsigned");
     public static final DataType<BigDecimal> DECIMAL            = new DefaultDataType<BigDecimal>(SQLDialect.ORACLE, SQLDataType.DECIMAL, "decimal", "decimal");
     public static final DataType<BigDecimal> DEC                = new DefaultDataType<BigDecimal>(SQLDialect.ORACLE, SQLDataType.DECIMAL, "dec", "decimal");
-    public static final DataType<String>     VARCHAR            = new DefaultDataType<String>(SQLDialect.ORACLE, SQLDataType.VARCHAR, "varchar", "char");
+    public static final DataType<String>     VARCHAR            = new DefaultDataType<String>(SQLDialect.ORACLE, SQLDataType.VARCHAR, "varchar2", "char");
     public static final DataType<String>     CHAR               = new DefaultDataType<String>(SQLDialect.ORACLE, SQLDataType.CHAR, "char", "char");
     public static final DataType<byte[]>     BLOB               = new DefaultDataType<byte[]>(SQLDialect.ORACLE, SQLDataType.BLOB, "blob", "binary");
     public static final DataType<byte[]>     BINARY             = new DefaultDataType<byte[]>(SQLDialect.ORACLE, SQLDataType.BINARY, "binary", "binary");
