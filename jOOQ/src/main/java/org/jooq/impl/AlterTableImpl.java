@@ -446,6 +446,9 @@ class AlterTableImpl extends AbstractQuery implements
                         .sql(' ')
                         .visit(primaryKey);
                     break;
+                case ORACLE:
+                    ctx.sql(' ').keyword("drop primary key drop index");
+                    break;
                 default:
                     ctx.sql(' ').keyword("drop primary key");
                     break;
